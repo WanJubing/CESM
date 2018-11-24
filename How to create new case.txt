@@ -1,0 +1,40 @@
+CESM learning!!!
+2018.11.24:
+~/CESM Tutorial/practical/Namelist and Code Modifications：P5
+Quickstart Guide：https://escomp.github.io/cesm/release-cesm2/
+https://esmci.github.io/cime/users_guide/create-a-case.html
+
+学习CESM的create_newcase：
+
+1.基本法（也是最原始法）：
+在任意路径下source CESM环境后直接调用create_newcase指令生成newcase：
+
+   source ~/.bashrc_cesm
+   create_newcase -case ./new -match sigon -compset F_2000 -res f19_16
+
+其中：
+-case：case文件的路径及名字
+-match：选择编译器
+-compset：选择使用的模式
+（ 具体的模式选择：http://www.cesm.ucar.edu/models/cesm2/cesm/compsets.html ）
+-res：使用的分辨率
+（ 具体的分辨率选择：http://www.cesm.ucar.edu/models/cesm2/cesm/grids.html ）
+
+这样即可生成原始case文件，之后可根据需要做进一步的修改
+
+2.“振宁”法：
+振宁师兄设计了一个sh文件：create_newcase.sh
+可以直接在这个sh文件中修改相关变量，然后直接运行即可生成case
+包含：casename；compset；res；stop_option；stop_N；ntasks；quename等
+另外，这个sh文件中还对生成的newcase中的env_run.xml做了默认修改：
+（1）./xmlchange RUNDIR='pwd'/exe                   ;默认模式运行输出路径在对应case下的exe中
+（2）./xmlchange DIN_LOC_ROOT='pwd'/input   ;修改输入资料的路径（一般不需要修改）敏感性实验可能会用到？
+
+设置完成后：
+
+   source ~/.bashrc_cesm
+   sh create_newcase.sh
+
+即可生成case文件
+
+Commit Changes: 2018.11.24
