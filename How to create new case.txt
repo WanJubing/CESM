@@ -15,6 +15,7 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 其中：
 -case：case文件的路径及名字
 -mach：选择编译器
+（ 具体的编译器选择路径：/users/yangsong3/CESM/cesm1_2_2/scripts/ccsm_utils/Machines/ ）
 -compset：选择使用的模式
 （ 具体的模式选择：http://www.cesm.ucar.edu/models/cesm2/cesm/compsets.html ）
 -res：使用的分辨率
