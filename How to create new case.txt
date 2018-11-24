@@ -40,6 +40,7 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 其次还包含了：
 ./xmlchange NTASKS_ATM=$NTASKS              ;确定使用的节点数（PE layers）
 ./cesm_setup                                ;顺便把setup也完成了
+./${casename}.build                         ;其中甚至还包含了编译指令（一般不用）
 最后还构建了用于提交任务的run.pbs文件
 
 设置完成后：
