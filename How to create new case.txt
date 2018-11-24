@@ -1,40 +1,40 @@
 CESM learning!!!
 2018.11.24:
-~/CESM Tutorial/practical/Namelist and Code Modifications£ºP5
-Quickstart Guide£ºhttps://escomp.github.io/cesm/release-cesm2/
+~/CESM Tutorial/practical/Namelist and Code Modificationsï¼šP5
+Quickstart Guideï¼šhttps://escomp.github.io/cesm/release-cesm2/
 https://esmci.github.io/cime/users_guide/create-a-case.html
 
-Ñ§Ï°CESMµÄcreate_newcase£º
+å­¦ä¹ CESMçš„create_newcaseï¼š
 
-1.»ù±¾·¨£¨Ò²ÊÇ×îÔ­Ê¼·¨£©£º
-ÔÚÈÎÒâÂ·¾¶ÏÂsource CESM»·¾³ºóÖ±½Óµ÷ÓÃcreate_newcaseÖ¸ÁîÉú³Énewcase£º
+1.åŸºæœ¬æ³•ï¼ˆä¹Ÿæ˜¯æœ€åŸå§‹æ³•ï¼‰ï¼š
+åœ¨ä»»æ„è·¯å¾„ä¸‹source CESMç¯å¢ƒåç›´æ¥è°ƒç”¨create_newcaseæŒ‡ä»¤ç”Ÿæˆnewcaseï¼š
 
    source ~/.bashrc_cesm
    create_newcase -case ./new -match sigon -compset F_2000 -res f19_16
 
-ÆäÖĞ£º
--case£ºcaseÎÄ¼şµÄÂ·¾¶¼°Ãû×Ö
--match£ºÑ¡Ôñ±àÒëÆ÷
--compset£ºÑ¡ÔñÊ¹ÓÃµÄÄ£Ê½
-£¨ ¾ßÌåµÄÄ£Ê½Ñ¡Ôñ£ºhttp://www.cesm.ucar.edu/models/cesm2/cesm/compsets.html £©
--res£ºÊ¹ÓÃµÄ·Ö±æÂÊ
-£¨ ¾ßÌåµÄ·Ö±æÂÊÑ¡Ôñ£ºhttp://www.cesm.ucar.edu/models/cesm2/cesm/grids.html £©
+å…¶ä¸­ï¼š
+-caseï¼šcaseæ–‡ä»¶çš„è·¯å¾„åŠåå­—
+-matchï¼šé€‰æ‹©ç¼–è¯‘å™¨
+-compsetï¼šé€‰æ‹©ä½¿ç”¨çš„æ¨¡å¼
+ï¼ˆ å…·ä½“çš„æ¨¡å¼é€‰æ‹©ï¼šhttp://www.cesm.ucar.edu/models/cesm2/cesm/compsets.html ï¼‰
+-resï¼šä½¿ç”¨çš„åˆ†è¾¨ç‡
+ï¼ˆ å…·ä½“çš„åˆ†è¾¨ç‡é€‰æ‹©ï¼šhttp://www.cesm.ucar.edu/models/cesm2/cesm/grids.html ï¼‰
 
-ÕâÑù¼´¿ÉÉú³ÉÔ­Ê¼caseÎÄ¼ş£¬Ö®ºó¿É¸ù¾İĞèÒª×ö½øÒ»²½µÄĞŞ¸Ä
+è¿™æ ·å³å¯ç”ŸæˆåŸå§‹caseæ–‡ä»¶ï¼Œä¹‹åå¯æ ¹æ®éœ€è¦åšè¿›ä¸€æ­¥çš„ä¿®æ”¹
 
-2.¡°ÕñÄş¡±·¨£º
-ÕñÄşÊ¦ĞÖÉè¼ÆÁËÒ»¸öshÎÄ¼ş£ºcreate_newcase.sh
-¿ÉÒÔÖ±½ÓÔÚÕâ¸öshÎÄ¼şÖĞĞŞ¸ÄÏà¹Ø±äÁ¿£¬È»ºóÖ±½ÓÔËĞĞ¼´¿ÉÉú³Écase
-°üº¬£ºcasename£»compset£»res£»stop_option£»stop_N£»ntasks£»quenameµÈ
-ÁíÍâ£¬Õâ¸öshÎÄ¼şÖĞ»¹¶ÔÉú³ÉµÄnewcaseÖĞµÄenv_run.xml×öÁËÄ¬ÈÏĞŞ¸Ä£º
-£¨1£©./xmlchange RUNDIR='pwd'/exe                   ;Ä¬ÈÏÄ£Ê½ÔËĞĞÊä³öÂ·¾¶ÔÚ¶ÔÓ¦caseÏÂµÄexeÖĞ
-£¨2£©./xmlchange DIN_LOC_ROOT='pwd'/input   ;ĞŞ¸ÄÊäÈë×ÊÁÏµÄÂ·¾¶£¨Ò»°ã²»ĞèÒªĞŞ¸Ä£©Ãô¸ĞĞÔÊµÑé¿ÉÄÜ»áÓÃµ½£¿
+2.â€œæŒ¯å®â€æ³•ï¼š
+æŒ¯å®å¸ˆå…„è®¾è®¡äº†ä¸€ä¸ªshæ–‡ä»¶ï¼šcreate_newcase.sh
+å¯ä»¥ç›´æ¥åœ¨è¿™ä¸ªshæ–‡ä»¶ä¸­ä¿®æ”¹ç›¸å…³å˜é‡ï¼Œç„¶åç›´æ¥è¿è¡Œå³å¯ç”Ÿæˆcase
+åŒ…å«ï¼šcasenameï¼›compsetï¼›resï¼›stop_optionï¼›stop_Nï¼›ntasksï¼›quenameç­‰
+å¦å¤–ï¼Œè¿™ä¸ªshæ–‡ä»¶ä¸­è¿˜å¯¹ç”Ÿæˆçš„newcaseä¸­çš„env_run.xmlåšäº†é»˜è®¤ä¿®æ”¹ï¼š
+ï¼ˆ1ï¼‰./xmlchange RUNDIR='pwd'/exe           ;é»˜è®¤æ¨¡å¼è¿è¡Œè¾“å‡ºè·¯å¾„åœ¨å¯¹åº”caseä¸‹çš„exeä¸­
+ï¼ˆ2ï¼‰./xmlchange DIN_LOC_ROOT='pwd'/input   ;ä¿®æ”¹è¾“å…¥èµ„æ–™çš„è·¯å¾„ï¼ˆä¸€èˆ¬ä¸éœ€è¦ä¿®æ”¹ï¼‰æ•æ„Ÿæ€§å®éªŒå¯èƒ½ä¼šç”¨åˆ°ï¼Ÿ
 
-ÉèÖÃÍê³Éºó£º
+è®¾ç½®å®Œæˆåï¼š
 
    source ~/.bashrc_cesm
    sh create_newcase.sh
 
-¼´¿ÉÉú³ÉcaseÎÄ¼ş
+å³å¯ç”Ÿæˆcaseæ–‡ä»¶
 
 Commit Changes: 2018.11.24
