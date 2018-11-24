@@ -50,4 +50,6 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 
 即可生成setup后的case文件
 
+more detail：https://opensky.ucar.edu/islandora/search/CESM?type=dismax
+
 Commit Changes: 2018.11.24
