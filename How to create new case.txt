@@ -10,11 +10,11 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 在任意路径下source CESM环境后直接调用create_newcase指令生成newcase：
 
    source ~/.bashrc_cesm
-   create_newcase -case ./new -match sigon -compset F_2000 -res f19_16
+   create_newcase -case ./new -mach sigon -compset F_2000 -res f19_16
 
 其中：
 -case：case文件的路径及名字
--match：选择编译器
+-mach：选择编译器
 -compset：选择使用的模式
 （ 具体的模式选择：http://www.cesm.ucar.edu/models/cesm2/cesm/compsets.html ）
 -res：使用的分辨率
