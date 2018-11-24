@@ -32,17 +32,21 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 振宁师兄设计了一个sh文件：create_newcase.sh
 可以直接在这个sh文件中修改相关变量，然后直接运行即可生成case
 包含：casename；compset；res；stop_option；stop_N；ntasks；quename等
+
 另外，这个sh文件中还对生成的newcase中的env_run.xml做了默认修改：
 （1）./xmlchange RUNDIR='pwd'/exe           ;默认模式运行输出路径在对应case下的exe中
 （2）./xmlchange DIN_LOC_ROOT='pwd'/input   ;修改输入资料的路径（一般不需要修改）敏感性实验可能会用到？
 
+其次还包含了：
+./xmlchange NTASKS_ATM=$NTASKS              ;确定使用的节点数（PE layers）
 ./cesm_setup                                ;顺便把setup也完成了
+最后还构建了用于提交任务的run.pbs文件
 
 设置完成后：
 
    source ~/.bashrc_cesm
    sh create_newcase.sh
 
-即可生成case文件
+即可生成setup后的case文件
 
 Commit Changes: 2018.11.24
