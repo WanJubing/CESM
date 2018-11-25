@@ -10,11 +10,11 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 在任意路径下source CESM环境后直接调用create_newcase指令生成newcase：
 
    source ~/.bashrc_cesm
-   create_newcase -case ./new -mach sigon -compset F_2000 -res f19_16
+   create_newcase -case ./new -mach sigon -compset F_2000 -res f19_g16
 
 其中：
 -case：case文件的路径及名字
--mach：选择编译器
+-mach：选择编译器（sigon：曙光）
 （ 具体的编译器选择路径：/users/yangsong3/CESM/cesm1_2_2/scripts/ccsm_utils/Machines/ ）
 -compset：选择使用的模式
 （ 具体的模式选择：http://www.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/compsets.html ）
@@ -36,14 +36,16 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 包含：casename；compset；res；stop_option；stop_N；ntasks；quename等
 
 另外，这个sh文件中还对生成的newcase中的env_run.xml做了默认修改：
-（1）./xmlchange RUNDIR='pwd'/exe           ;默认模式运行输出路径在对应case下的exe中
-（2）./xmlchange DIN_LOC_ROOT='pwd'/input   ;修改输入资料的路径（一般不需要修改）敏感性实验可能会用到？
+（1）./xmlchange RUNDIR=`pwd`/exe           ;默认模式运行输出路径在对应case下的exe中（注意是飞斜杠而不是单引号）
+（2）./xmlchange DIN_LOC_ROOT=`pwd`/input   ;修改输入资料的路径（一般不需要修改）敏感性实验可能会用到？
 
 其次还包含了：
 ./xmlchange NTASKS_ATM=$NTASKS              ;确定使用的节点数（PE layers）
 ./cesm_setup                                ;顺便把setup也完成了
 ./${casename}.build                         ;其中甚至还包含了编译指令（一般不用）
+walltime=999                                ;设定了运行时间的上限（墙上时间：程序的最大执行时间）
 最后还构建了用于提交任务的run.pbs文件
+（注：#后面若有PSB则还是有意义的一行，还是会读入）
 
 设置完成后：
 
