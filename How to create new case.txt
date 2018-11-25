@@ -31,7 +31,7 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 生成相关的namelists等目录
 
 2.“振宁”法：
-振宁师兄设计了一个sh文件：create_newcase.sh
+振宁师兄设计了一个sh文件：create_newcase.sh （包含了之前基本法的所有步骤并且还做了一些常用的默认修改，还添加了四期提交任务的run.pbs）
 可以直接在这个sh文件中修改相关变量，然后直接运行即可生成case
 包含：casename；compset；res；stop_option；stop_N；ntasks；quename等
 
@@ -56,4 +56,4 @@ walltime=999                                ;设定了运行时间的上限（�
 
 more detail：http://www.cesm.ucar.edu/events/tutorials/2018/coursework.html
 
-Commit Changes: 2018.11.24
+Commit Changes: 2018.11.25
