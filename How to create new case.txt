@@ -17,9 +17,9 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 -mach：选择编译器
 （ 具体的编译器选择路径：/users/yangsong3/CESM/cesm1_2_2/scripts/ccsm_utils/Machines/ ）
 -compset：选择使用的模式
-（ 具体的模式选择：http://www.cesm.ucar.edu/models/cesm2/cesm/compsets.html ）
+（ 具体的模式选择：http://www.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/compsets.html ）
 -res：使用的分辨率
-（ 具体的分辨率选择：http://www.cesm.ucar.edu/models/cesm2/cesm/grids.html ）
+（ 具体的分辨率选择：http://www.cesm.ucar.edu/models/cesm1.2/cesm/doc/modelnl/grid.html ）
 
 这样即可生成原始case文件，之后还需要setup一下：
 进入生成的case文件：
@@ -50,6 +50,6 @@ https://esmci.github.io/cime/users_guide/create-a-case.html
 
 即可生成setup后的case文件
 
-more detail：https://opensky.ucar.edu/islandora/search/CESM?type=dismax
+more detail：http://www.cesm.ucar.edu/events/tutorials/2018/coursework.html
 
 Commit Changes: 2018.11.24
